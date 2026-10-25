@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade — MyMusicPDF</title>
+    <style>
+        :root {
+            --primary: #1976D2;
+            --text: #212121;
+            --text-secondary: #5f6368;
+            --bg: #F8F9FA;
+            --card-bg: #FFFFFF;
+            --border: #E0E0E0;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #64B5F6;
+                --text: #E8EAED;
+                --text-secondary: #9AA0A6;
+                --bg: #121212;
+                --card-bg: #1E1E1E;
+                --border: #333333;
+            }
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 24px 16px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 1px solid var(--border);
+        }
+        h1 {
+            color: var(--primary);
+            font-size: 28px;
+            margin-top: 0;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 12px;
+        }
+        h2 {
+            font-size: 20px;
+            margin-top: 28px;
+            color: var(--text);
+            border-left: 4px solid var(--primary);
+            padding-left: 10px;
+        }
+        p, li {
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .badge {
+            display: inline-block;
+            background: #E8F5E9;
+            color: #2E7D32;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 13px;
+            margin-bottom: 16px;
+        }
+        @media (prefers-color-scheme: dark) {
+            .badge {
+                background: #1B5E20;
+                color: #C8E6C9;
+            }
+        }
+        .date {
+            font-style: italic;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+            font-size: 13px;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="badge">Privacidade Garantida • 100% Offline</span>
+        <h1>Política de Privacidade — MyMusicPDF</h1>
+        <p class="date">Última atualização: 25 de Outubro de 2026</p>
+
+        <p>A privacidade dos nossos usuários é um princípio fundamental do aplicativo <strong>MyMusicPDF</strong>. Esta política descreve de forma transparente como o aplicativo interage com as permissões do dispositivo e como os seus dados são tratados.</p>
+
+        <h2>1. Resumo: Nosso Compromisso com a sua Privacidade</h2>
+        <ul>
+            <li><strong>Zero Coleta de Dados Pessoais:</strong> O MyMusicPDF não coleta, não armazena em servidores remotos e não compartilha nenhuma informação de identificação pessoal.</li>
+            <li><strong>Operação 100% Offline:</strong> O aplicativo funciona inteiramente no seu aparelho, sem necessidade de conexão com a internet.</li>
+            <li><strong>Sem Anúncios ou Rastreamento:</strong> Não integramos SDKs de anunciantes, redes de rastreamento ou serviços de telemetria invasivos.</li>
+        </ul>
+
+        <h2>2. Permissões Solicitadas e Finalidades</h2>
+        <p>Para fornecer recursos específicos aos músicos em apresentações e estudos, o MyMusicPDF requer as seguintes permissões:</p>
+        
+        <h3>A. Microfone (RECORD_AUDIO)</h3>
+        <ul>
+            <li><strong>Finalidade Exclusiva:</strong> Utilizado pelo <em>Afinador Cromático</em> integrado para detectar a frequência acústica fundamental das notas musicais emitidas pelo seu instrumento em tempo real.</li>
+            <li><strong>Processamento Efêmero:</strong> O sinal sonoro capturado é processado exclusivamente na memória volátil (RAM) pelo algoritmo matemático de afinação (YIN) e descartado instantaneamente.</li>
+            <li><strong>Nenhuma Gravação:</strong> O aplicativo <strong>não grava</strong>, não salva arquivos de áudio no armazenamento do dispositivo e não transmite nenhum som ou voz para servidores externos.</li>
+        </ul>
+
+        <h3>B. Armazenamento e Acesso a Arquivos (READ_EXTERNAL_STORAGE / MANAGE_EXTERNAL_STORAGE)</h3>
+        <ul>
+            <li><strong>Finalidade Exclusiva:</strong> Permitir que o usuário selecione, organize e visualize suas próprias partituras em formato PDF e importe/exporte listas de repertório (.mymusicpdf).</li>
+            <li><strong>Privacidade dos Documentos:</strong> Suas partituras e anotações pertencem única e exclusivamente a você. Nenhum documento é lido por terceiros ou enviado para a nuvem.</li>
+        </ul>
+
+        <h3>C. Manter a Tela Ligada (WAKE_LOCK)</h3>
+        <ul>
+            <li><strong>Finalidade:</strong> Evitar que a tela do dispositivo apague ou bloqueie acidentalmente enquanto você está tocando no palco ou ensaiando.</li>
+        </ul>
+
+        <h2>3. Compartilhamento de Dados com Terceiros</h2>
+        <p>O MyMusicPDF não compartilha, não vende, não aluga e não transfere nenhum dado de usuário ou de arquivo com nenhuma empresa ou terceiro.</p>
+
+        <h2>4. Armazenamento Local e Exclusão de Dados</h2>
+        <p>Todas as configurações, repertórios criados e anotações ficam armazenados estritamente no banco de dados SQLite local no próprio dispositivo. Se o usuário desinstalar o aplicativo, todos os dados internos associados serão excluídos permanentemente pelo próprio sistema operacional Android.</p>
+
+        <h2>5. Conformidade com a Legislação (LGPD e GDPR)</h2>
+        <p>Como o aplicativo não armazena nem processa dados pessoais em servidores, estamos em total conformidade por concepção (<em>Privacy by Design</em>) com a Lei Geral de Proteção de Dados (LGPD - Brasil) e com o Regulamento Geral sobre a Proteção de Dados (GDPR - União Europeia).</p>
+
+        <h2>6. Contato e Dúvidas</h2>
+        <p>Caso tenha qualquer dúvida sobre esta Política de Privacidade ou sobre o aplicativo, entre em contato através do e-mail do desenvolvedor fornecido na ficha do aplicativo na Google Play Store.</p>
+
+        <footer>
+            &copy; 2026 MyMusicPDF. Todos os direitos reservados.
+        </footer>
+    </div>
+</body>
+</html>
