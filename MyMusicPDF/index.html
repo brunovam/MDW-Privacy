@@ -117,7 +117,7 @@
     <div class="container">
         <span class="badge">Privacidade • Partituras 100% Locais</span>
         <h1>Política de Privacidade — MyMusicPDF</h1>
-        <p class="date">Última atualização: 18 de Novembro de 2026</p>
+        <p class="date">Última atualização: 20 de Novembro de 2026</p>
 
         <p>A privacidade dos músicos é um princípio fundamental do aplicativo <strong>MyMusicPDF</strong>, desenvolvido por <strong>Machado Digital Works</strong>. Esta política descreve de forma transparente como o aplicativo interage com as permissões do dispositivo, serviços de terceiros e dados locais.</p>
 
@@ -130,24 +130,25 @@
 
         <h2>2. Permissões Solicitadas e Finalidades</h2>
         <ul>
-            <li><strong>Microfone (<code>RECORD_AUDIO</code>):</strong> Utilizado exclusivamente pelo Afinador Cromático em tempo real. Nenhuma gravação é armazenada ou enviada externamente.</li>
-            <li><strong>Armazenamento e Acesso a Arquivos (<code>READ_EXTERNAL_STORAGE</code>, <code>WRITE_EXTERNAL_STORAGE</code>, <code>MANAGE_EXTERNAL_STORAGE</code>, <code>READ_MEDIA_IMAGES</code>):</strong> Utilizados exclusivamente para indexar suas pastas de partituras PDF locais, abrir arquivos PDF externos, salvar anotações diretamente nos PDFs selecionados e importar/exportar repertórios (<code>.mymusicpdf</code>).</li>
+            <li><strong>Microfone (<code>RECORD_AUDIO</code> no Android / <code>NSMicrophoneUsageDescription</code> no iOS):</strong> Utilizado exclusivamente pelo Afinador Cromático em tempo real. Nenhuma gravação é armazenada ou enviada externamente.</li>
+            <li><strong>Armazenamento de Partituras PDF (Android: <code>READ_EXTERNAL_STORAGE</code> <code>maxSdkVersion="32"</code>, <code>WRITE_EXTERNAL_STORAGE</code> <code>maxSdkVersion="29"</code>, <code>MANAGE_EXTERNAL_STORAGE</code>; iOS: <code>NSDocumentsFolderUsageDescription</code>):</strong> Utilizados exclusivamente para indexar suas pastas de partituras PDF locais, abrir arquivos PDF externos, salvar anotações diretamente nos PDFs selecionados e importar/exportar repertórios (<code>.mymusicpdf</code>). Permissões de galeria de fotos e vídeos (<code>READ_MEDIA_IMAGES</code>) <strong>não são declaradas nem solicitadas</strong>.</li>
+            <li><strong>Transparência de Rastreamento no iOS (<code>NSUserTrackingUsageDescription</code> / ATT):</strong> Em builds gratuitos no iOS, o usuário pode permitir ou recusar o rastreamento de anúncios sem perder funcionalidades.</li>
             <li><strong>Manter a Tela Ligada (<code>WAKE_LOCK</code>):</strong> Mantém a tela ativa durante apresentações ao vivo, ensaios e leitura de partituras.</li>
-            <li><strong>Rede e Faturamento (<code>INTERNET</code>, <code>com.android.vending.BILLING</code>):</strong> Utilizados para veiculação de anúncios na versão gratuita e processamento seguro da assinatura <strong>MyMusicPDF Pro</strong> via Google Play Store.</li>
+            <li><strong>Rede e Faturamento (<code>INTERNET</code>, <code>com.android.vending.BILLING</code>):</strong> Utilizados para veiculação de anúncios na versão gratuita e processamento seguro da assinatura <strong>MyMusicPDF Pro</strong> via Google Play Store / Apple App Store.</li>
         </ul>
 
         <h2>3. Serviços de Terceiros e Coleta Técnica</h2>
-        <p>O MyMusicPDF não cria contas de usuário nem mantém banco de dados remoto próprio. Para viabilizar a versão gratuita e o gerenciamento de assinaturas, o aplicativo utiliza apenas SDKs homologados:</p>
+        <p>O MyMusicPDF não exige criação de conta de usuário nem mantém banco de dados remoto próprio. Para viabilizar a versão gratuita e o gerenciamento de assinaturas, o aplicativo utiliza apenas SDKs homologados:</p>
         <ul>
-            <li><strong>Google AdMob (Google LLC):</strong> Exibe banners publicitários na versão gratuita. O Google AdMob pode coletar identificadores técnicos do dispositivo (como o ID de Publicidade do Android / AAID), endereço IP aproximado e dados de diagnóstico/interação com anúncios para veiculação, prevenção a fraudes e medição, conforme a <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidade do Google</a>.</li>
-            <li><strong>Google Play In-App Billing &amp; RevenueCat:</strong> Utilizados para processar compras integradas e validar a assinatura <strong>MyMusicPDF Pro</strong> (remoção de anúncios e recursos Pro). Dados financeiros e de pagamento são processados exclusivamente pela Google Play Store; o RevenueCat gerencia o status anônimo do direito de assinatura conforme a <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Política de Privacidade do RevenueCat</a>.</li>
+            <li><strong>Google AdMob &amp; Google UMP SDK (Google LLC):</strong> Exibe banners publicitários na versão gratuita após coletar preferências de consentimento de privacidade (LGPD/GDPR) via <strong>Google UMP</strong> antes da inicialização do SDK de anúncios (opções revisáveis a qualquer momento nas Configurações do app). O Google AdMob pode coletar identificadores técnicos do dispositivo (como o ID de Publicidade do Android / AAID ou IDFA mediante consentimento ATT), localização aproximada inferida pelo endereço IP, interações com anúncios e dados de diagnóstico/desempenho para veiculação, prevenção a fraudes e medição, conforme a <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidade do Google</a>.</li>
+            <li><strong>Google Play Billing, Apple App Store (StoreKit) &amp; RevenueCat:</strong> Utilizados para processar compras integradas, manter o histórico de compras e validar o direito de assinatura <strong>MyMusicPDF Pro</strong> (remoção de anúncios e recursos Pro). Nenhum dado de cartão de crédito é coletado ou armazenado pelo MyMusicPDF; transações financeiras são intermediadas exclusivamente pela Google Play Store / Apple App Store e gerenciadas de forma anônima (App User ID anônimo) pelo RevenueCat conforme a <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Política de Privacidade do RevenueCat</a>.</li>
         </ul>
 
-        <h2>4. Armazenamento Local e Exclusão de Dados</h2>
-        <p>Todas as preferências, repertórios, anotações em Markdown, histórico de BPM e anotações vetoriais ficam armazenados localmente no banco de dados SQLite do dispositivo. Ao desinstalar o MyMusicPDF, todos os dados locais armazenados pelo aplicativo são automaticamente excluídos pelo sistema operacional Android.</p>
+        <h2>4. Armazenamento Local Protegido e Exclusão de Dados</h2>
+        <p>Todas as preferências, repertórios, anotações em Markdown, histórico de BPM e anotações vetoriais ficam armazenados localmente no diretório privado do banco de dados SQLite no dispositivo (com backup automático em nuvem desativado no Android via <code>allowBackup="false"</code> e compartilhamento público de arquivos desativado no iOS). Ao desinstalar o MyMusicPDF, todos os dados locais armazenados pelo aplicativo são automaticamente excluídos pelo sistema operacional.</p>
 
-        <h2>5. Conformidade com LGPD e GDPR</h2>
-        <p>O MyMusicPDF adota o princípio de privacidade desde a concepção (<em>Privacy by Design</em>), em conformidade com a Lei Geral de Proteção de Dados (LGPD — Brasil) e com o Regulamento Geral sobre a Proteção de Dados (GDPR — União Europeia).</p>
+        <h2>5. Conformidade com LGPD, GDPR e Termos de Serviço</h2>
+        <p>O MyMusicPDF adota o princípio de privacidade desde a concepção (<em>Privacy by Design</em>), em conformidade com a Lei Geral de Proteção de Dados (LGPD — Brasil) e com o Regulamento Geral sobre a Proteção de Dados (GDPR — União Europeia). Consulte também nossos <a href="./terms.html">Termos de Serviço</a>.</p>
 
         <h2>6. Contato</h2>
         <p>Em caso de dúvidas sobre esta Política de Privacidade ou sobre o aplicativo, entre em contato com <strong>Machado Digital Works</strong> pelo e-mail: <a href="mailto:machadodigitalworks@gmail.com">machadodigitalworks@gmail.com</a>.</p>
@@ -156,7 +157,7 @@
 
         <span class="badge">Privacy • 100% Local Sheet Music</span>
         <h1>Privacy Policy — MyMusicPDF</h1>
-        <p class="date">Last updated: November 18, 2026</p>
+        <p class="date">Last updated: November 20, 2026</p>
 
         <p>User privacy is a core principle of <strong>MyMusicPDF</strong>, developed by <strong>Machado Digital Works</strong>. This policy transparently explains how the app uses device permissions, local storage, and third-party SDKs.</p>
 
@@ -169,27 +170,28 @@
 
         <h2>2. Permissions Used</h2>
         <ul>
-            <li><strong>Microphone (<code>RECORD_AUDIO</code>):</strong> Used solely by the Chromatic Tuner in real time. No sound is recorded or sent externally.</li>
-            <li><strong>File &amp; Storage Access (<code>READ_EXTERNAL_STORAGE</code>, <code>WRITE_EXTERNAL_STORAGE</code>, <code>MANAGE_EXTERNAL_STORAGE</code>, <code>READ_MEDIA_IMAGES</code>):</strong> Used strictly to index your local PDF sheet music folders, open external PDFs, save annotations into your selected PDF files, and import/export setlists (<code>.mymusicpdf</code>).</li>
+            <li><strong>Microphone (<code>RECORD_AUDIO</code> on Android / <code>NSMicrophoneUsageDescription</code> on iOS):</strong> Used solely by the Chromatic Tuner in real time. No sound is recorded or sent externally.</li>
+            <li><strong>PDF Sheet Music Access (Android: <code>READ_EXTERNAL_STORAGE</code> <code>maxSdkVersion="32"</code>, <code>WRITE_EXTERNAL_STORAGE</code> <code>maxSdkVersion="29"</code>, <code>MANAGE_EXTERNAL_STORAGE</code>; iOS: <code>NSDocumentsFolderUsageDescription</code>):</strong> Used strictly to scan and index your local PDF sheet music folders, open external PDFs, save annotations into your selected PDF files, and import/export setlists (<code>.mymusicpdf</code>). Gallery/photo permissions (<code>READ_MEDIA_IMAGES</code>) are <strong>not declared or requested</strong>.</li>
+            <li><strong>iOS Tracking Transparency (<code>NSUserTrackingUsageDescription</code> / ATT):</strong> On iOS free-tier builds, users may allow or decline advertising tracking without losing any app features.</li>
             <li><strong>Keep Screen Awake (<code>WAKE_LOCK</code>):</strong> Prevents the screen from dimming or locking during live performances and rehearsals.</li>
-            <li><strong>Network &amp; Billing (<code>INTERNET</code>, <code>com.android.vending.BILLING</code>):</strong> Used to load ads in the free tier and securely process the optional <strong>MyMusicPDF Pro</strong> subscription via Google Play.</li>
+            <li><strong>Network &amp; Billing (<code>INTERNET</code>, <code>com.android.vending.BILLING</code>):</strong> Used to load ads in the free tier and securely process the optional <strong>MyMusicPDF Pro</strong> subscription via Google Play / Apple App Store.</li>
         </ul>
 
         <h2>3. Third-Party Services and Technical Data</h2>
-        <p>MyMusicPDF does not require user accounts and does not operate proprietary remote servers. To support the free ad-supported tier and subscription validation, the app integrates:</p>
+        <p>MyMusicPDF does not require user accounts and does not operate proprietary remote user databases. To support the free ad-supported tier and subscription validation, the app integrates:</p>
         <ul>
-            <li><strong>Google AdMob (Google LLC):</strong> Serves banner ads in the free version. Google AdMob may collect technical device identifiers (such as the Android Advertising ID / AAID) and diagnostic/ad interaction data for ad delivery, fraud prevention, and measurement under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
-            <li><strong>Google Play In-App Billing &amp; RevenueCat:</strong> Used to securely process in-app purchases and verify the <strong>MyMusicPDF Pro</strong> entitlement. Payment details are handled solely by Google Play Store, while RevenueCat manages anonymous entitlement status under <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat's Privacy Policy</a>.</li>
+            <li><strong>Google AdMob &amp; Google UMP SDK (Google LLC):</strong> Serves banner ads in the free version after collecting <strong>Google UMP</strong> privacy consent preferences under GDPR and LGPD before initializing the Ads SDK (preferences can be reviewed anytime in Settings). Google AdMob may collect technical device identifiers (such as the Android Advertising ID / AAID or ATT-consented IDFA), approximate IP-based location, ad interaction data, and diagnostic/performance logs for ad delivery, fraud prevention, and measurement under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+            <li><strong>Google Play Billing, Apple App Store (StoreKit) &amp; RevenueCat:</strong> Used to securely process in-app purchases, track subscription purchase history, and verify the <strong>MyMusicPDF Pro</strong> entitlement. No payment card details are collected or stored by MyMusicPDF; transactions are processed solely by Google Play Store / Apple App Store, while RevenueCat manages anonymous entitlement status (anonymous App User ID) under <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat's Privacy Policy</a>.</li>
         </ul>
 
-        <h2>4. Local Storage and Data Deletion</h2>
-        <p>All app settings, setlists, Markdown notes, per-song BPM records, and vector annotations are stored locally in the device's SQLite database. Uninstalling MyMusicPDF automatically deletes all local app data via the Android operating system.</p>
+        <h2>4. Protected Local Storage and Data Deletion</h2>
+        <p>All app settings, setlists, Markdown notes, per-song BPM records, and vector annotations are stored locally inside the app's private SQLite database directory (with Android auto-backup disabled via <code>allowBackup="false"</code> and iOS public File Sharing disabled). Uninstalling MyMusicPDF automatically deletes all local app data via the operating system.</p>
 
-        <h2>5. Contact</h2>
-        <p>If you have any questions regarding this Privacy Policy, please contact <strong>Machado Digital Works</strong> at: <a href="mailto:machadodigitalworks@gmail.com">machadodigitalworks@gmail.com</a>.</p>
+        <h2>5. Terms of Service &amp; Contact</h2>
+        <p>Please also review our <a href="./terms.html">Terms of Service</a>. If you have any questions regarding this Privacy Policy, please contact <strong>Machado Digital Works</strong> at: <a href="mailto:machadodigitalworks@gmail.com">machadodigitalworks@gmail.com</a>.</p>
 
         <footer>
-            &copy; 2026 Machado Digital Works — MyMusicPDF. Todos os direitos reservados / All rights reserved.
+            &copy; 2026 Machado Digital Works — MyMusicPDF. Todos os direitos reservados / All rights reserved. | <a href="./terms.html">Termos de Serviço / Terms of Service</a>
         </footer>
     </div>
 </body>
